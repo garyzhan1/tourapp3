@@ -1,6 +1,6 @@
 import streamlit as st
  
-st.title("东临碣石聊天室")
+st.title("深圳翩翩-测试")
  
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -11,7 +11,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
  
 # React to user input
-if prompt := st.chat_input("What's your message?"):
+if prompt := st.chat_input("您的问题是？"):
     # Display user message in chat message container
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history

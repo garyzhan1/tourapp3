@@ -13,8 +13,7 @@ if file is not None:
         label = "选择横坐标的属性",
         options = ['Total', 'Quantity']
     )
-    st.line_chart(total)
-    st.pyplot(x_var)
+    plt.xlabel(x_var)
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],

@@ -9,7 +9,7 @@ if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
-st.table(df)
+st.table(file)
 st.table(df1)
 
 data = [1,2,3,4,5]

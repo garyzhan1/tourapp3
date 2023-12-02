@@ -10,7 +10,7 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
 
-st.dataframe(df1)
+st.dataframe(file)
 
 st.title("深圳翩翩-测试")
  

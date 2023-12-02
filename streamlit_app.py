@@ -5,14 +5,11 @@ import pandas as pd
 st.set_page_config(page_title="快速基于Dataframe构建数据大屏", layout="wide")
  
 file = st.sidebar.file_uploader("请上传csv表格", type=["csv"])
-if file is None:
-    st.markdown("##")
-
 if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
-st.table(df1)
+    st.write(data)
 
 data = [1,2,3,4,5]
 df2 = pd.DataFrame(data)

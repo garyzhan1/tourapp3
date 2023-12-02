@@ -1,6 +1,9 @@
 import streamlit as st
+import pandas as pd
 
-data = pd.read_csv('data/data.csv')
+url="https://github.com/garyzhan1/StockMKT1/blob/main/supermarkt_sales.csv"
+df = pd.read_csv(url, header=0)
+print(df)
 
 
 st.title("深圳翩翩-测试")

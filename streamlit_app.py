@@ -8,14 +8,14 @@ if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1, columns=column)
-    st.write(df)
     x_var = st.selectbox(
         label = "选择横坐标的属性",
         options = ['Total', 'Quantity']
     )
     chart_data = pd.DataFrame(
-        x_var,
+        df,
         columns=["Total", "Quantity"])
+    st.write(columns)
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],
@@ -56,7 +56,7 @@ df2 = pd.DataFrame(data)
 st.table(df2)
 st.table(data)
 
-st.title("深圳翩翩-测试")
+st.title("测试")
  
 if "messages" not in st.session_state:
     st.session_state.messages = []

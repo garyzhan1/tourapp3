@@ -11,6 +11,9 @@ if file is not None:
     df = pd.DataFrame(df1,columns=column)
 st.table(df1)
 
+if file is None:
+    st.markdown("##")
+
 data = [1,2,3,4,5]
 df2 = pd.DataFrame(data)
 st.table(df2)

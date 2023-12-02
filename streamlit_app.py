@@ -1,9 +1,19 @@
 import streamlit as st
 import pandas as pd
+import csv
 
-df = pd.read_csv(supermarkt_sales.csv)
-print(df)
-
+def read_csv(supermarkt_sales.csv):
+    """
+    读取csv文件并以列表形式输出
+    :param file_path: str
+    :return: [list[str]]
+    """
+    res = []
+    with open(supermarkt_sales.csv, 'r',encoding='utf-8')as f:
+        read = csv.reader(f)
+        for line in read:
+            res.append(line)
+    return res
 
 st.title("深圳翩翩-测试")
  

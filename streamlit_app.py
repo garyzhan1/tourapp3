@@ -1,7 +1,6 @@
-
 import streamlit as st
 import pandas as pd
-import matplotlib
+
 
 st.set_page_config(page_title="快速基于Dataframe构建数据大屏", layout="wide")
  

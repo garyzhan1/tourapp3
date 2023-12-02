@@ -7,9 +7,27 @@ file = st.sidebar.file_uploader("请上传csv表格", type=["csv"])
 if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
-    df = pd.DataFrame(df1, columns=("City"))
+    df = pd.DataFrame(df1, columns=column)
     st.write(df)
 
+data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'age': [25, 30, 35, 40],
+        'gender': ['F', 'M', 'M', 'M'],
+        'salary': [50000, 70000, 90000, 110000]}
+
+st.line_chart(data3)
+st.bar_chart(data3)
+st.area_chart(data3)
+
+
+col1, col2 = st.columns([3, 1])
+data2 = np.random.randn(10, 1)
+
+col1.subheader("A wide column with a chart")
+col1.line_chart(data2)
+
+col2.subheader("A narrow column with the data")
+col2.write(data2)
 
 data_df = pd.DataFrame(
     {

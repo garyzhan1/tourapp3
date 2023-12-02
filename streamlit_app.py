@@ -10,6 +10,8 @@ if file is not None:
     df = pd.DataFrame(df1, columns=["Total", "Quantity"])
     st.write(df)
     st.line_chart(df)
+    st.area_chart(df)
+    st.bar_chart(df)
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],

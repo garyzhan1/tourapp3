@@ -9,10 +9,8 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1, columns=column)
     st.write(df)
-    x_var = st.selectbox(
-        label = "选择横坐标的属性",
-        options = ['Total', 'Quantity']
-    )
+    total_sales = int(df_selection["Total"].sum())
+    average_rating = round(df_selection["Rating"].mean(), 1)
 
 st.sidebar.header("Please Filter Here:")
 city = st.sidebar.multiselect(

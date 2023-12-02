@@ -7,7 +7,7 @@ file = st.sidebar.file_uploader("请上传csv表格", type=["csv"])
 if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
-    df = pd.DataFrame(df1, columns=["Total", "Quantity"]
+    df = pd.DataFrame(df1, columns=["Total", "Quantity"])
     st.write(df)
     st.line_chart(df)
 

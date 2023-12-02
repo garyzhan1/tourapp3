@@ -9,9 +9,9 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
     st.write(df)
-st.data_editor(
-    df,
-    column_config={
+    st.data_editor(
+        df,
+        column_config={
         "City": st.column_config.LineChartColumn(
             "Sales (last 6 months)",
             width="medium",

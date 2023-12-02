@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-url="https://github.com/garyzhan1/StockMKT1/blob/31169b88f46ba21f10d401cf685b00c3a796409d/supermarkt_sales.csv"
-df = pd.read_csv(url, sep=';', header=0)
+df = pd.read_csv(supermarkt_sales.csv)
 print(df)
 
 

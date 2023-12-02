@@ -10,9 +10,12 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
 
-st.dataframe(file)
+st.dataframe(df)
 st.table(file)
 
+data = [1,2,3,4,5]
+df2 = pd.DataFrame(data)
+print(df2)
 
 st.title("深圳翩翩-测试")
  

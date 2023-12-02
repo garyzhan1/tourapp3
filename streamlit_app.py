@@ -7,11 +7,9 @@ file = st.sidebar.file_uploader("请上传csv表格", type=["csv"])
 if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
-    df = pd.DataFrame(df1, columns=column)
+    df = pd.DataFrame(df1, columns=["Total", "Quantity"]
     st.write(df)
-    total_sales = int(df_selection["Total"].sum())
-    average_rating = round(df_selection["Rating"].mean(), 1)
-    st.write(total_sales) 
+    st.line_chart(df)
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],

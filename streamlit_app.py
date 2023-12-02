@@ -1,5 +1,8 @@
 import streamlit as st
- 
+
+data = pd.read_csv('data/data.csv')
+
+
 st.title("深圳翩翩-测试")
  
 if "messages" not in st.session_state:

@@ -11,6 +11,8 @@ if file is not None:
     df = pd.DataFrame(df1,columns=column)
 
 st.dataframe(file)
+st.table(file)
+
 
 st.title("深圳翩翩-测试")
  

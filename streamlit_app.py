@@ -1,6 +1,9 @@
+!pip3 install matplotlib
+
 import streamlit as st
 import pandas as pd
- 
+import matplotlib
+
 st.set_page_config(page_title="快速基于Dataframe构建数据大屏", layout="wide")
  
 file = st.sidebar.file_uploader("请上传csv表格", type=["csv"])

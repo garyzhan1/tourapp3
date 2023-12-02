@@ -7,15 +7,19 @@ file = st.sidebar.file_uploader("请上传csv表格", type=["csv"])
 if file is not None:
     df1 = pd.read_csv(file, encoding="gbk")
     column = df1.columns  #获取表头
-    df = pd.DataFrame(df1, columns=column)
+    df = pd.DataFrame(df1, columns=column
+    st.write(columns)
     x_var = st.selectbox(
         label = "选择横坐标的属性",
         options = ['Total', 'Quantity']
     )
-    chart_data = pd.DataFrame(
-        df,
-        columns=["Total", "Quantity"])
-    st.write(columns)
+
+st.sidebar.header("Please Filter Here:")
+city = st.sidebar.multiselect(
+    "Select the City:",
+    options=df["City"].unique(),
+    default=df["City"].unique()
+)
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],

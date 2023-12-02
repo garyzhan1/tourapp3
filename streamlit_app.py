@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import csv
+import streamlit_apex_charts
 from streamlit_apex_charts import line_chart, bar_chart, pie_chart, area_chart, radar_chart
  
 st.set_page_config(page_title="快速基于Dataframe构建数据大屏", layout="wide")

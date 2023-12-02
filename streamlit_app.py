@@ -9,10 +9,24 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
     st.write(df)
+st.data_editor(
+    df,
+    column_config={
+        "City": st.column_config.LineChartColumn(
+            "Sales (last 6 months)",
+            width="medium",
+            help="The sales volume in the last 6 months",
+            y_min=0,
+            y_max=100,
+         ),
+    },
+    hide_index=True,
+)
+
 
 data_df = pd.DataFrame(
     {
-        "sales": [
+        "Dow Jones trend": [
             [0, 4, 26, 80, 100, 40],
             [80, 20, 80, 35, 40, 100],
             [10, 20, 80, 80, 70, 0],
@@ -24,7 +38,7 @@ data_df = pd.DataFrame(
 st.data_editor(
     data_df,
     column_config={
-        "sales": st.column_config.LineChartColumn(
+        "Dow Jones trend": st.column_config.LineChartColumn(
             "Sales (last 6 months)",
             width="medium",
             help="The sales volume in the last 6 months",

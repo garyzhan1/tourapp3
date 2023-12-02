@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import pandas_profiling
 
 st.set_page_config(page_title="快速基于Dataframe构建数据大屏", layout="wide")
  
@@ -10,9 +9,31 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
     st.write(df)
-    pr = df.profile_report()
-    st_profile_report(pr)
 
+data_df = pd.DataFrame(
+    {
+        "sales": [
+            [0, 4, 26, 80, 100, 40],
+            [80, 20, 80, 35, 40, 100],
+            [10, 20, 80, 80, 70, 0],
+            [10, 100, 20, 100, 30, 100],
+        ],
+    }
+)
+
+st.data_editor(
+    data_df,
+    column_config={
+        "sales": st.column_config.LineChartColumn(
+            "Sales (last 6 months)",
+            width="medium",
+            help="The sales volume in the last 6 months",
+            y_min=0,
+            y_max=100,
+         ),
+    },
+    hide_index=True,
+)
 
 data = [1,2,3,4,5]
 df2 = pd.DataFrame(data)

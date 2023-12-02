@@ -11,13 +11,7 @@ if file is not None:
     st.write(df)
     total_sales = int(df_selection["Total"].sum())
     average_rating = round(df_selection["Rating"].mean(), 1)
-
-st.sidebar.header("Please Filter Here:")
-city = st.sidebar.multiselect(
-    "Select the City:",
-    options=df["City"].unique(),
-    default=df["City"].unique()
-)
+    st.write(total_sales) 
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],

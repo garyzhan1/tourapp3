@@ -12,7 +12,8 @@ if file is not None:
 
 data = [1,2,3,4,5]
 df2 = pd.DataFrame(data)
-print(df2)
+st.table(df2)
+st.table(data)
 
 st.title("深圳翩翩-测试")
  

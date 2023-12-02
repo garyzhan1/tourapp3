@@ -10,6 +10,9 @@ if file is not None:
     column = df1.columns  #获取表头
     df = pd.DataFrame(df1,columns=column)
     st.write(df)
+    pr = df.profile_report()
+    st_profile_report(pr)
+
 
 data = [1,2,3,4,5]
 df2 = pd.DataFrame(data)

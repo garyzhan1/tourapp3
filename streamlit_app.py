@@ -13,7 +13,9 @@ if file is not None:
         label = "选择横坐标的属性",
         options = ['Total', 'Quantity']
     )
-    plt.xlabel(x_var)
+    chart_data = pd.DataFrame(
+        x_var,
+        columns=["Total", "Quantity"])
 
 data3 = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
         'age': [25, 30, 35, 40],
